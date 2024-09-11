@@ -1,0 +1,22 @@
+body {
+    background-color: rgba(230, 173, 211, 0.856);
+    justify-content: center;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center ;
+  }
+  
+  image{
+    position: center;
+    width: 20%;
+
+    justify-content: center;
+  }
+
+
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }

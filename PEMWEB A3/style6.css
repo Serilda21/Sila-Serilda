@@ -1,0 +1,51 @@
+/* Add a pink theme to the form */
+
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #ffe6e6; 
+  }
+  
+  h1 {
+    color: #ff69b4; 
+    text-align: center; 
+  }
+  
+  table {
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  
+  th, td {
+    border: 1px solid #ffc5c5;
+    padding: 10px; 
+    text-align: left; 
+  }
+  
+  th {
+    background-color: #ffe6e6; 
+  }
+  
+  input[type="text"], input[type="date"], select {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ffc5c5; 
+    border-radius: 5px; 
+  }
+  
+  input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px; 
+  }
+  
+  input[type="submit"] {
+    background-color: #ff69b4; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #ff33cc;
+  }

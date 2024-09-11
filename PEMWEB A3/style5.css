@@ -1,0 +1,50 @@
+/* Add a pink theme to the form */
+
+body {
+  font-family: Arial, sans-serif; /* set a clean font */
+  background-color: #ffe6e6; /* add a light pink background */
+}
+
+h1 {
+  color: #ff69b4; /* make the heading pink */
+  text-align: center; /* center the heading */
+}
+
+form {
+  max-width: 400px; 
+  margin: 40px auto; 
+  padding: 20px; 
+  border: 1px solid #ffc5c5; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); 
+}
+
+label {
+  display: block; 
+  margin-bottom: 10px; 
+}
+
+input[type="text"], input[type="date"], select {
+  width: 100%; 
+  padding: 10px; 
+  margin-bottom: 20px; 
+  border: 1px solid #ffc5c5; 
+  border-radius: 5px; 
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin-right: 10px; 
+}
+
+input[type="submit"] {
+  background-color: #ff69b4; 
+  color: #fff; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+input[type="submit"]:hover {
+  background-color: #ff33cc; 
+}
