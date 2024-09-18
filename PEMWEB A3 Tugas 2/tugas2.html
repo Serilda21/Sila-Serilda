@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Mahasiswa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        
+        body {
+            background-color: #f5c9df;
+        }
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-control {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #ffe6f2; 
+        }
+        .btn-primary {
+            background-color: #ff69b4; 
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background-color: #ff99cc; /* Warna softpink hover */
+        }
+        .table {
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            background-color: #ffe6f2; /* Warna softpink */
+        }
+        .table th {
+            background-color: #ff69b4; /* Warna softpink */
+            color: #fff;
+        }
+        #result {
+            background-color: #ffe6f2; 
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .title h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff69b4; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>Formulir Mahasiswa</h2>
+        </div>
+        <form id="student-form">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="nim">NIM:</label>
+                <input type="text" id="nim" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Telepon">No. Telepon </label>
+                <input type="text" id="telepon"class=""form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="kelas">Kelas:</label>
+                <select id="kelas" class="form-control" required>
+                    <option value="">Select Kelas</option>
+                    <option value="A">Kelas A</option>
+                    <option value="B">Kelas B</option>
+                    <option value="C">Kelas C</option>
+                    <option value="D">Kelas D</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="jurusan">Jurusan:</label>
+                <select id="jurusan" class="form-control" required>
+                    <option value="">Select Jurusan</option>
+                    <option value="Sistem Informasi KelautanK">SIK</option>
+                    <option value="Pendidikan Kelautan dan Perikanan">PKP</option>
+                    <option value="Logistik Kelautan">LK</option>
+                    <option value="PGPAUD">PGPAUD</option>
+                    <option value="PGSD">PGSD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim</button>
+        </form>
+
+        <div id="result">
+            <h2>Hasil Pengisian Formulir</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>NIM</th>
+                        <th>Telepon</th>
+                        <th>Kelas</th>
+                        <th>Jurusan</th>
+                        <th>Alamat</th>
+                    </tr>
+                </thead>
+                <tbody id="result-table">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        
+        $('#student-form').on('submit', function(event) {
+            event.preventDefault();
+            console.log('Form submitted!');
+
+            
+            var nama = $('#nama').val();
+            var nim = $('#nim').val();
+            var telepon = $('#TELEPON').val();
+            var kelas = $('#kelas').val();
+            var jurusan = $('#jurusan').val();
+            var alamat = $('#alamat').val();
+
+           
+            $('#result-table').append(`
+                <tr>
+                    <td>${nama}</td>
+                    <td>${nim}</td>
+                    <td>${telepon}</td>
+                    <td>${kelas}</td>
+                    <td>${jurusan}</td>
+                    <td>${alamat}</td>
+                </tr>
+            `);
+        });
+
+        $('#nama').on('input', function() {
+            console.log('Nama changed!');
+        });
+
+        $('#nim').on('input', function() {
+            console.log('NIM changed!');
+        });
+
+        $('#telepon').on('input', function() {
+            console.log('Telepon changed!');
+        });
+        
+
+        $('#kelas').on('change', function() {
+            console.log('Kelas changed to ' + $(this).val());
+        });
+
+        $('#jurusan').on('change', function () {
+        
+        });
