@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Mahasiswa</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        tr:hover {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Data Mahasiswa</h1>
+
+    <table id="mahasiswaTable">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Kelas</th>
+                <th>Semester</th>
+                <th>Jurusan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Andi</td>
+                <td>10A</td>
+                <td>2</td>
+                <td>Teknik Informatika</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Budi</td>
+                <td>10B</td>
+                <td>4</td>
+                <td>Sistem Informasi</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Citra</td>
+                <td>11A</td>
+                <td>6</td>
+                <td>Teknik Komputer</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        
+        const table = document.getElementById("mahasiswaTable");
+
+        
+        for (let i = 1; i < table.rows.length; i++) {
+            table.rows[i].onclick = function () {
+                let no = this.cells[0].innerHTML;
+                let nama = this.cells[1].innerHTML;
+                let kelas = this.cells[2].innerHTML;
+                let semester = this.cells[3].innerHTML;
+                let jurusan = this.cells[4].innerHTML;
+                
+                alert("No: " + no + "\nNama: " + nama + "\nKelas: " + kelas + "\nSemester: " + semester + "\nJurusan: " + jurusan);
+            };
+        }
+    </script>
+
+</body>
+</html>
